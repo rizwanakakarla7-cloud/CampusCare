@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusCare - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">CampusCare Admin</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+
+    <!-- Main Dashboard -->
+    <main class="features">
+
+        <h1>Admin Dashboard</h1>
+        <p>Manage and monitor campus complaints.</p>
+
+
+        <!-- Dashboard Count Cards -->
+        <div class="feature-container">
+
+            <div class="card">
+                <h3>Total Complaints</h3>
+                <h2 id="totalCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <h2 id="pendingCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>In Progress</h3>
+                <h2 id="progressCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Resolved</h3>
+                <h2 id="resolvedCount">0</h2>
+            </div>
+
+        </div>
+
+
+        <!-- Student Complaints Table -->
+        <h2 style="margin-top:50px;">Student Complaints</h2>
+
+        <div style="overflow-x:auto; margin-top:25px;">
+
+            <table style="width:100%; background:white; border-collapse:collapse;"
+                   border="1" cellpadding="12">
+
+                <thead>
+                    <tr style="background:#dbeafe;">
+                        <th>ID</th>
+                        <th>Student Name</th>
+                        <th>Category</th>
+                        <th>Complaint</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="complaintsTable">
+                    <tr>
+                        <td colspan="7">Loading complaints...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 CampusCare | Admin Panel</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

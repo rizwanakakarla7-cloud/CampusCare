@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCare - Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">CampusCare</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="features">
+        <h1>Student Dashboard</h1>
+        <p>Welcome to CampusCare! Manage your campus complaints here.</p>
+
+        <div class="feature-container">
+            <div class="card">
+                <h3>Submit Complaint</h3>
+                <p>Report classroom, hostel or laboratory problems.</p>
+                <a href="#complaint" class="btn">Submit Now</a>
+            </div>
+
+            <div class="card">
+                <h3>My Complaints</h3>
+                <p>View your submitted complaints and their status.</p>
+                <a href="#mycomplaints" class="btn">View Complaints</a>
+            </div>
+
+            <div class="card">
+                <h3>Complaint Status</h3>
+                <p>Track Pending, In Progress and Resolved complaints.</p>
+            </div>
+        </div>
+
+        <section id="complaint" style="margin-top: 60px;">
+            <h2>Submit a Complaint</h2>
+
+            <form id="complaintForm" class="auth-card" style="margin: 30px auto;">
+
+                <label>Complaint Title</label>
+                <input type="text" id="title"
+                       placeholder="Enter complaint title" required>
+
+                <label>Category</label>
+                <select id="category" required style="width:100%; padding:13px;">
+                    <option value="">Select Category</option>
+                    <option>Classroom</option>
+                    <option>Laboratory</option>
+                    <option>Hostel</option>
+                    <option>Electrical</option>
+                    <option>Cleaning</option>
+                    <option>Other</option>
+                </select>
+
+                <label>Description</label>
+                <textarea id="description"
+                    placeholder="Describe your problem"
+                    required style="width:100%; padding:13px; height:100px;"></textarea>
+
+                <label>Location</label>
+                <input type="text" id="location"
+                       placeholder="Enter location">
+
+                <button type="submit" class="auth-btn">
+                    Submit Complaint
+                </button>
+            </form>
+        </section>
+
+        <section id="mycomplaints" style="margin-top: 50px;">
+            <h2>My Complaints</h2>
+            <div id="complaintsList">
+                <p>Your submitted complaints will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 CampusCare | Smart Campus Management</p>
+    </footer>
+
+    <script src="js/complaints.js"></script>
+
+</body>
+</html>
